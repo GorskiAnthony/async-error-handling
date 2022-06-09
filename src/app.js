@@ -1,11 +1,10 @@
 const express = require("express");
-
 const app = express();
-
-app.use(express.json());
 
 const userRoutes = require("./routes/userRoutes");
 const { handleError } = require("./middlewares/errorHandler");
+
+app.use(express.json());
 
 app.use("/user", userRoutes);
 
@@ -20,7 +19,7 @@ app.use(handleError);
  * Route for 404 error
  */
 app.get("/*", (req, res) => {
-  res.status(404).send({ message: "Not found !" });
+  res.status(404).send({ message: "Route not found !" });
 });
 
 module.exports = app;

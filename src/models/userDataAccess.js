@@ -15,8 +15,8 @@ exports.getAllPromise = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve(users);
   }, 300);
-  //throw new Error("BOOM 💣")
-  //reject(new Error("BOOM 💣"))
+  // throw new Error("BOOM 💣");
+  // reject(new Error("BOOM 💣"));
 }).catch((err) => {
   console.log(err.message);
 });
@@ -27,9 +27,9 @@ exports.getAllPromise = new Promise((resolve, reject) => {
  */
 exports.getAllAsync = async () => {
   return await new Promise((resolve, reject) => {
-    //setTimeout(resolve(users), 300)
-    //throw new Error("BOOM 💣")
-    reject(new Error("BOOM 💣"));
+    // setTimeout(resolve(users), 300);
+    // throw new Error("BOOM 💣");
+    reject(new Error("BOOM 💣 BOOM 💣"));
   }).catch((err) => {
     console.log(err.message);
   });

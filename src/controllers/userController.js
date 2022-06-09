@@ -31,7 +31,7 @@ exports.getAsync = async (req, res) => {
 
     if (users) res.status(200).json(users);
     // Hello you !
-    else throw new Error("User not fount");
+    else throw new Error("User not found");
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -42,7 +42,7 @@ exports.getAsyncErrorHandled = asyncHandler(async (req, res) => {
   const users = await userDataAccess.getAllAsync();
 
   if (users) res.status(200).json(users);
-  else throw new Error("Something went terribly wrong...");
+  else throw new Error("Something went terribly wrong 💣");
 });
 
 // Same, but not handled

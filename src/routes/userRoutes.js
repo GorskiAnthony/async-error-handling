@@ -1,3 +1,5 @@
+// const router = require('express').Router();
+
 const express = require("express");
 const router = express.Router();
 
@@ -8,7 +10,9 @@ const userController = require("../controllers/userController");
  * - getCallback
  * - getPromise
  */
+// http://localhost:8000/user/getCallback
 router.use("/getCallback", userController.getCallback);
+// http://localhost:8000/user/getPromise
 router.use("/getPromise", userController.getPromise);
 
 /**
